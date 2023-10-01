@@ -1,6 +1,5 @@
 // import { getApi } from "@/libs/getApi";
 import mongoose from "mongoose";
-import Image from "next/image";
 
 export default async function Home() {
   // const dataTest = getApi();

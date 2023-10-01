@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
 
-const connectDB = async () => {
+const connectDB = () => {
   if (mongoose.connections[0].readyState) {
     console.log("connected readystate");
   } else {
-    await mongoose
+    mongoose
       .connect(process.env.MONGOURI!)
       .then(() => {
         console.log("db connected");
