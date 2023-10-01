@@ -17,7 +17,6 @@ export async function GET() {
 
 export async function POST(req: Request) {
   const test = await req.json();
-  await connectDB();
   try {
     await Test.create(test);
     return NextResponse.json(
