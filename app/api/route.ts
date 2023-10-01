@@ -5,8 +5,8 @@ import { NextResponse } from "next/server";
 export async function GET() {
   await connectDB();
   try {
-    const test = await Test.find();
-    return NextResponse.json(test, { status: 201 });
+    // const test = await Test.find();
+    return NextResponse.json({ message: "hello" }, { status: 201 });
   } catch (error: any) {
     return NextResponse.json(
       { message: "fail to connect" + error },
