@@ -5,8 +5,7 @@ connectDB();
 
 export async function GET() {
   try {
-    const test = await Test.find();
-    return NextResponse.json(test, { status: 201 });
+    return NextResponse.json({ message: "hello" }, { status: 201 });
   } catch (error: any) {
     return NextResponse.json(
       { message: "fail to connect" + error },
